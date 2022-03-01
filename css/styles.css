@@ -1,5 +1,4 @@
 @import url(/Fonts/GillSans/Gill\ Sans.otf);
-@import url(/Fonts/hand_of_sean/Hand_Of_Sean_Demo.ttf);
 
 /* *{
     margin: 0;
@@ -21,11 +20,267 @@ body {
     background-color: #FFD400;
 }
 
+.navbar-toggler {
+    border: none;
+}
+
+.grid--empresas {
+
+    display: grid;  
+                    /* 6 columnas */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+                       /* 1 filas */
+    grid-template-rows: 150px; 
+}
 
 .empresa {
     width: 130px;
     height: auto;
+    justify-self: center;
 }
+
+
+/*    SUCURSALES   */
+
+.cards-sucursales {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.card-sucursal, .list-group-item {
+    background-color: #FFD400;
+}
+
+.card-sucursal {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #ED1C24;
+}
+
+.card-link:hover {
+    color: #ED1C24;
+    font-weight: 500;
+}
+
+/*   SERVICIOS   */
+
+.service_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+
+.service {
+    width: 140px;
+    height: auto;
+    
+    display: grid;  
+                        /* 1 columnas */
+    grid-template-columns: 1fr; 
+                           /* 2 filas */
+    grid-template-rows: 150px 25px;
+
+    justify-self: center;
+    
+} 
+
+.service__img {
+    display: block;
+    width: 80%;
+    justify-self: center;
+}
+
+.service__overlay {
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.service__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.service__img:hover {
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in-out;
+}
+
+.service__img:hover ~.service__overlay {
+    opacity: 1;
+    transition: transform 0.25s;
+}
+
+.service__title {
+    text-align: center;
+}
+
+
+/*   ESPACIOS    */
+
+.espacios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 400px);
+}
+
+.image {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 25px;
+    overflow: hidden;
+    justify-self: center;
+    border: solid 5px #ED1C24;
+    
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffd50095;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover{
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+    transition: transform 0.25s;
+}
+
+.image__title {
+    font-weight: bold;
+}
+
+.image__desc {
+    margin-top: 0.25em;
+
+}
+
+/* FORM CONTACTO */
+
+
+.forms {
+    margin:30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px;
+}
+
+.forms__options {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+
+.form__grupo1 .form{
+    padding-bottom: 20px;
+}
+
+
+.input {
+    outline: none;
+    border: solid 2px #ED1C24;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    width: 500px;
+    border-radius: 10px;
+    display: block
+}
+
+.input__title {
+    font-weight: 600;
+}
+
+.form__select {
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 6px;
+}
+
+.form__check, .form__radio {
+    display: inline-block;
+}
+
+
+
+.input--textarea {
+    height: 250px;
+    border-radius: 15px;
+}
+
+.btns {
+    margin-top: 30px;
+}
+
+.btn {
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border: 0;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.btn--yellow {
+    background-color: #FFD400;
+
+}
+
+
+
+
+
 
 /*--------------------------------------------------*/
 
@@ -103,6 +358,132 @@ body {
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
+
+/*  MAIN  */
+
+.empresa {
+    width: 90px;
+    height: auto;
+}
+
+.grid--empresas {
+    display: grid;  
+                    /* 3 columnas */
+    grid-template-columns: 1fr 1fr 1fr; 
+                       /* 2 filas */
+    grid-template-rows: 110px 110px;
+}
+
+.cards-sucursales {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-sucursal {
+    margin: 30px 0;
+}
+
+/*   SERVICIOS   */
+
+.service_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
+}
+
+
+.service {
+    display: grid;  
+                    /* 2 columnas */
+    grid-template-columns: 1fr 1fr; 
+                       /* 2 filas */
+    grid-template-rows: 70px;
+}
+
+.service__overlay {
+    opacity: 1;
+    padding: 0 20px;
+    width: 200px;
+    display: block;
+}
+
+.service__img {
+    height: 60px;
+    width: auto;
+}
+
+.service__title {
+    font-size: smaller;
+    text-align: start;
+}
+
+/*    ESPACIOS    */
+
+.espacios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 250px);
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+}
+
+.image__overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 1;
+    
+}
+
+.image__desc {
+    margin-top: 0;
+    font-size: smaller;
+
+}
+
+/* MAIN CONTACTO */
+.forms {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px;
+}
+
+.forms__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form__check {
+    margin-left: 0px;
+}
+
+.input {
+    width: 320px;
+}
+
+.input--textarea {
+    width: 320px;
+}
+
+.form__grupo2 {
+    margin-top: 150px;
+}
 
 /* FOOTER */
 
