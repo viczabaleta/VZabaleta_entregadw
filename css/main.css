@@ -1,0 +1,158 @@
+/* FOOTER */
+.footer {
+  background-color: #ffd500a0;
+  width: 100%; }
+  .footer .grupo1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 200px;
+    padding: 45px 0px; }
+
+.box {
+  width: 100%;
+  height: 100%; }
+
+.box--p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.box--logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer__logocirc {
+  height: 180px;
+  width: auto; }
+
+.footer__socialmedia {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.footer__socialmedia a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin-right: 10px; }
+
+.footer .grupo2 {
+  padding: 15px 10px;
+  text-align: center;
+  background-color: #919191;
+  line-height: 20px; }
+
+@media (max-width: 768px) {
+  /* FOOTER */
+  .footer .grupo1 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 35px; }
+  .box {
+    padding: 20px; }
+  .box--p {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer .grupo2 {
+    font-size: smaller; } }
+
+/* BODY */
+body {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+  background-color: #ffd5005a; }
+
+.navbar {
+  background-color: #FFD400; }
+  .navbar .navbar-toggler {
+    border: none; }
+
+/* FORM CONTACTO */
+.forms {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 600px; }
+
+.forms__options {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.form__grupo1 .form {
+  padding-bottom: 20px; }
+
+.input {
+  outline: none;
+  border: solid 2px #ED1C24;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  width: 500px;
+  border-radius: 10px;
+  display: block; }
+  .input .input__title {
+    font-weight: 600; }
+
+.form__select {
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 6px; }
+
+.form__check, .form__radio {
+  display: inline-block; }
+
+.input--textarea {
+  height: 250px;
+  border-radius: 15px; }
+
+.btns {
+  margin-top: 30px; }
+  .btns .btn {
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border: 0;
+    margin-right: 20px;
+    text-align: center; }
+    .btns .btn:hover {
+      cursor: pointer;
+      transform: scale(1.1); }
+
+.btn--yellow {
+  background-color: #FFD400; }
+
+/*--------------------------------------------------*/
+/*--------------------------------------------------*/
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  /* MAIN CONTACTO */
+  .forms {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px; }
+  .forms__options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+  .form__check {
+    margin-left: 0px; }
+  .input {
+    width: 320px; }
+  .input--textarea {
+    width: 320px; }
+  .form__grupo2 {
+    margin-top: 150px; } }
